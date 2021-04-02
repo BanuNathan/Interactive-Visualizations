@@ -11,7 +11,7 @@ function init() {
          var outputArray = metadata.filter(sampleObject => sampleObject.id == defaultSample);
          var output = outputArray[0];
          console.log(outputArray[0]);      
-    w       var samples = data.samples;
+         var samples = data.samples;
           var outputArray = samples.filter(sampleObject => sampleObject.id == defaultSample);
           var output = outputArray[0];
           var sample_values = output.sample_values.slice(0,10);
@@ -113,7 +113,7 @@ function metaData(sample) {
              title: "Distribution of OTU's",
              showlegend: false,
              height: 600,
-             width: 600,
+             width: 1000,
              xaxis: {
                  title:{
                      text: "OTU ids"
@@ -144,7 +144,7 @@ function metaData(sample) {
           }
         ];
         
-        var layout = { width: 600, height: 400 };
+        var layout = { width: 600, height: 350 };
         Plotly.newPlot('gauge', data, layout);
          
      });
